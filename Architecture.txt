@@ -1,0 +1,26 @@
+PROJECT ARCHITECTURE
+
+Flow Sequence:
+   
+    Input Layer:
+        Product Image
+        Product Text (title/description)	
+   
+    Preprocessing:
+        Image resizing, normalization
+        Text tokenization, padding
+   
+    Feature Extraction:
+        CNN (ResNet-50): Generates deep visual embeddings
+        LSTM: Produces sequential semantic embeddings
+   
+    Similarity Computation:
+        System calculates Cosine Similarity between the input vectors and the pre-computed database vectors.
+
+    Joint Embedding Layer:
+        The image and text features are projected into a shared 256-dimensional embedding space where similarity is computed directly.
+   
+    Output:
+        Recommended items with similarity scores and multimodal relevance
+        Top-K recommended items are displayed on the Streamlit UI.
+        Both image and text embeddings are mapped into a common space before similarity computation.

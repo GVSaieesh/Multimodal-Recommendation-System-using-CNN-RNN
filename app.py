@@ -574,7 +574,7 @@ def personalize(sim_scores, pref_scores, weight=0.30):
     return (1 - weight) * sim_scores + weight * pref_scores
 
 # =============================================================
-#  PRICE PARSING
+#  PRIC
 # =============================================================
 PRICE_BUDGETS = {
     "Budget  (under ₹500)":           (0,     500),
